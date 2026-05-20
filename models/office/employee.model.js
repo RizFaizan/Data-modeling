@@ -14,7 +14,7 @@ const employeeSchema = new mongoose.Schema({
         required: true
     },
     phone: {
-        type: Number,
+        type: String,
         required: true
     },
     gender: {
@@ -23,7 +23,8 @@ const employeeSchema = new mongoose.Schema({
         required: true
     },
     joinDate: {
-        type: Number,
+        type: Date,
+        default: Date.now,
         required: true
     }
 }, { timestamps: true });

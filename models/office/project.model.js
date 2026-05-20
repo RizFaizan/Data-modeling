@@ -11,19 +11,20 @@ const projectSchema = new mongoose.Schema({
     },
     clientName: {
         type: String,
-        reqiured: true
+        required: true
     },
     startDate: {
-        type: Number,
-        required: true
+        type: Date,
+        required: true,
     },
-    endtDate: {
-        type: Number,
-        required: true
+    endDate: {
+        type: Date,
+        required: true,
     },
     status: {
         type: String,
-        enum: ["Pending", "Completed", "Finished", "In Progress"],
+        enum: ['PLANNING', 'IN_PROGRESS', 'ON_HOLD', 'COMPLETED', 'CANCELED'],
+        default: 'PLANNING',
         required: true
     }
 }, { timestamps: true });
