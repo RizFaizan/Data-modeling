@@ -21,6 +21,10 @@ const employeeSchema = new mongoose.Schema({
         type: String,
         enum: ["Male", "Female", "Rather not say"],
         required: true
+    },
+    joinDate: {
+        type: Number,
+        required: true
     }
 }, { timestamps: true });
 
