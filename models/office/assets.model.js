@@ -20,7 +20,6 @@ const assetsSchema = new mongoose.Schema({
     },
     purchaseDate: {
         type: Date,
-        required: true
     },
     condition: {
         type: String,
